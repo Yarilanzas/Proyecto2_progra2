@@ -137,6 +137,7 @@
     <ClCompile Include="GestorArchivos.cpp" />
     <ClCompile Include="GestorCiudad.cpp" />
     <ClCompile Include="PlantaSolar.cpp" />
+    <ClCompile Include="ReporteAmbiental.cpp" />
     <ClCompile Include="ReporteBase.cpp" />
     <ClCompile Include="ReporteEnergia.cpp" />
     <ClCompile Include="ReporteTrafico.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="IteradorDistrito.h" />
     <ClInclude Include="MedicionTrafico.h" />
     <ClInclude Include="PlantaSolar.h" />
+    <ClInclude Include="ReporteAmbiental.h" />
     <ClInclude Include="ReporteBase.h" />
     <ClInclude Include="ReporteEnergia.h" />
     <ClInclude Include="ReporteTrafico.h" />
