@@ -66,6 +66,12 @@
     <ClCompile Include="ReporteBase.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="ReporteEnergia.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="ReporteTrafico.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IEntidad.h">
@@ -162,6 +168,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="IFuenteDatosReporte.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ReporteEnergia.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ReporteTrafico.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
