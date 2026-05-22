@@ -123,11 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdaptadorEnergia.cpp" />
     <ClCompile Include="CentralEmergencias.cpp" />
     <ClCompile Include="CentroControlVial.cpp" />
     <ClCompile Include="CiudadInteligente.cpp" />
     <ClCompile Include="ComplejoIndustrial.cpp" />
     <ClCompile Include="CorredorVial.cpp" />
+    <ClCompile Include="DatosEnergia.cpp" />
     <ClCompile Include="Distrito.cpp" />
     <ClCompile Include="EdificioResidencial.cpp" />
     <ClCompile Include="EntidadBase.cpp" />
@@ -145,6 +147,7 @@
     <ClCompile Include="ViaAlterna.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdaptadorEnergia.h" />
     <ClInclude Include="AdaptadorSensorTrafico.h" />
     <ClInclude Include="AnalizadorGenerico.h" />
     <ClInclude Include="CentralEmergencias.h" />
@@ -154,6 +157,7 @@
     <ClInclude Include="ComplejoIndustrial.h" />
     <ClInclude Include="ComponenteVial.h" />
     <ClInclude Include="CorredorVial.h" />
+    <ClInclude Include="DatosEnergia.h" />
     <ClInclude Include="DeficitRecursoException.h" />
     <ClInclude Include="Distrito.h" />
     <ClInclude Include="EdificioResidencial.h" />

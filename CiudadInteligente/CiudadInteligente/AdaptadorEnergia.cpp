@@ -1,0 +1,2 @@
+#include "AdaptadorEnergia.h"
+//falta 
