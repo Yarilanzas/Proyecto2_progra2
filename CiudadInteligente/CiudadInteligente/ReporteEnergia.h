@@ -8,13 +8,13 @@ class ReporteEnergia: public ReporteBase
 {
 private: 
     //de reporte base
-    string modulo, lugar, estado;
+    //string modulo, lugar, estado;
     //propios
     double consumoTotal, produccionEnergetica;
     vector<shared_ptr<Distrito>> distritosMayorConsumo;
     bool alertas, fuentesRenovables; 
 public:
-    ReporteEnergia(string m, string l, string es, double cT, double pT);
+    ReporteEnergia(string m, string l, string es, double cT, double pT,bool fr);
     string toString() const override;
 
 };

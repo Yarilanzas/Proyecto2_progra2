@@ -7,7 +7,7 @@ using namespace std;
 class ReporteTrafico : public ReporteBase
 {
 private: 
-    string modulo, lugar, estado;
+    //string modulo, lugar, estado;
     int vehiculosMonitoreados, accidentes;
     vector<shared_ptr<Distrito>> distritosMayorCongestion;
     double promedioDeVelocidad;

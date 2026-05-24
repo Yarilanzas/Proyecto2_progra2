@@ -8,9 +8,11 @@ class ReporteAmbiental: public ReporteBase
 {
 private:
     //de reporte base
-    string modulo, lugar, estado, calidadAire, nivelDeRuido, estadoAmbiental;
+   // string modulo, lugar, estado, 
+        string calidadAire, estadoAmbiental;
+        double nivelDeRuido;
 public:
-    ReporteAmbiental(string m,string l,string e,string c, string nR, string esA);
+    ReporteAmbiental(string m,string l,string e,string c, double nR, string esA);
     string toString() const override;
 
 };

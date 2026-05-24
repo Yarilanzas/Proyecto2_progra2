@@ -5,6 +5,7 @@ ReporteBase::ReporteBase(string modulo, string lugar, string estado)
     this->modulo = modulo;
     this->lugar = lugar;
     this->estado = estado;
+    critico = false;
 
 }
 
@@ -21,4 +22,9 @@ string ReporteBase::getLugar()
 string ReporteBase::getEstado()
 {
     return estado;
+}
+
+bool ReporteBase::esCritico() const
+{
+    return critico;  
 }

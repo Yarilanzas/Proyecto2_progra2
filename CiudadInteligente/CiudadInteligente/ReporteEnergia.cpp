@@ -1,11 +1,16 @@
 #include "ReporteEnergia.h"
 
-ReporteEnergia::ReporteEnergia(string m, string l, string es, double cT, double pT): ReporteBase(m,l, es)
+ReporteEnergia::ReporteEnergia(string m, string l, string es, double cT, double pT, bool fr): ReporteBase(m,l, es)
 {
     this->consumoTotal = cT;
     this->produccionEnergetica = pT; 
-    this->alertas = false;
-    this->fuentesRenovables = true; 
+    this->fuentesRenovables = fr;
+    this->alertas = false; 
+    if (consumoTotal >= produccionEnergetica) {
+        this->alertas = true;
+        critico = true;
+    }
+
 }
 
 string ReporteEnergia::toString() const

@@ -140,6 +140,7 @@
     <ClCompile Include="FabricaCarretera.cpp" />
     <ClCompile Include="GestorArchivos.cpp" />
     <ClCompile Include="GestorCiudad.cpp" />
+    <ClCompile Include="AlertarObservador.cpp" />
     <ClCompile Include="PlantaSolar.cpp" />
     <ClCompile Include="ReporteAmbiental.cpp" />
     <ClCompile Include="ReporteBase.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="IObservador.h" />
     <ClInclude Include="IProductor.h" />
     <ClInclude Include="IteradorDistrito.h" />
+    <ClInclude Include="AlertarObservador.h" />
     <ClInclude Include="MedicionTrafico.h" />
     <ClInclude Include="PlantaSolar.h" />
     <ClInclude Include="ReporteAmbiental.h" />
