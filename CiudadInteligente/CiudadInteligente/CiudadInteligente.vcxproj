@@ -147,6 +147,7 @@
     <ClCompile Include="ReporteEnergia.cpp" />
     <ClCompile Include="ReporteTrafico.cpp" />
     <ClCompile Include="SimuladorCarreterasInteligentes.cpp" />
+    <ClCompile Include="SistemaReportes.cpp" />
     <ClCompile Include="ViaAlterna.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +190,7 @@
     <ClInclude Include="ReporteTrafico.h" />
     <ClInclude Include="SensorTraficoExterno.h" />
     <ClInclude Include="SimuladorCarreterasInteligentes.h" />
+    <ClInclude Include="SistemaReportes.h" />
     <ClInclude Include="ViaAlterna.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
