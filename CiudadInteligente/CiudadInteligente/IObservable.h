@@ -9,9 +9,9 @@ class IObservable {
 public:
     virtual ~IObservable() = default;
     //virtual void actualizarReporte(shared_ptr<ReporteBase> r)const = 0;
-    virtual void agregarObservador(IObservador* obs)const=0;
-    virtual void eliminarObservador(IObservador* obs)const = 0;
-    virtual void notificar() = 0;
+    virtual void agregarObservador(IObservador* obs)=0;
+    virtual void eliminarObservador(IObservador* obs) = 0;
+    virtual void notificar(shared_ptr<ReporteBase> r) = 0;
 
     
 };
