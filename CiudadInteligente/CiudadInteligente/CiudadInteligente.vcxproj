@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Adapatdortrafico.cpp" />
+    <ClCompile Include="AdaptadorAmbiental.cpp" />
     <ClCompile Include="AdaptadorEnergia.cpp" />
     <ClCompile Include="CentralEmergencias.cpp" />
     <ClCompile Include="CentroControlVial.cpp" />
@@ -141,6 +142,7 @@
     <ClCompile Include="GestorArchivos.cpp" />
     <ClCompile Include="GestorCiudad.cpp" />
     <ClCompile Include="AlertarObservador.cpp" />
+    <ClCompile Include="Menuprincipal.cpp" />
     <ClCompile Include="PlantaSolar.cpp" />
     <ClCompile Include="ReporteAmbiental.cpp" />
     <ClCompile Include="ReporteBase.cpp" />
@@ -152,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adapatdortrafico.h" />
+    <ClInclude Include="AdaptadorAmbiental.h" />
     <ClInclude Include="AdaptadorEnergia.h" />
     <ClInclude Include="AdaptadorSensorTrafico.h" />
     <ClInclude Include="AnalizadorGenerico.h" />
@@ -183,6 +186,7 @@
     <ClInclude Include="IteradorDistrito.h" />
     <ClInclude Include="AlertarObservador.h" />
     <ClInclude Include="MedicionTrafico.h" />
+    <ClInclude Include="Menuprincipal.h" />
     <ClInclude Include="PlantaSolar.h" />
     <ClInclude Include="ReporteAmbiental.h" />
     <ClInclude Include="ReporteBase.h" />
