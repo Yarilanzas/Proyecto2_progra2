@@ -22,8 +22,8 @@ string AdaptadorEnergia::obtenerDatos() const {
     std::ostringstream oss;
     oss << "Distrito: " << adaptado->getDistrito() << "\n";
     oss << "Consumo Total: " << adaptado->getConsumoTotal() << " kWh\n";
-    oss << "Producción Solar: " << adaptado->getProduccionSolar() << " kWh\n";
-    oss << "Producción Total: " << adaptado->getProduccionTotal() << " kWh\n";
+    oss << "Produccion Solar: " << adaptado->getProduccionSolar() << " kWh\n";
+    oss << "Produccion Total: " << adaptado->getProduccionTotal() << " kWh\n";
     oss << "Alertas de Sobreconsumo: " << adaptado->getAlertas() << "\n";
     return oss.str();
 

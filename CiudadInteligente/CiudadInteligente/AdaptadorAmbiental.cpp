@@ -30,10 +30,10 @@ string AdaptadorAmbiental::obtenerDatos() const {
     ss << "Calidad del Aire: " << calidadAire << "\n";
     ss << "Nivel de Ruido: " << nivelRuido << " \n";
     ss << "Estado de Residuos: " << estadoResiduos << "\n";
-    ss << "Índice de Contaminación: " << indiceContaminacion << "\n";
+    ss << "Indice de ContaminaciOn: " << indiceContaminacion << "\n";
     ss << "Estado Ambiental: " << getEstado() << "\n";
     return ss.str();
 }
 string AdaptadorAmbiental::getNombreModulo() const {
-    return "Módulo Ambiental";
+    return "Modulo Ambiental";
 }
