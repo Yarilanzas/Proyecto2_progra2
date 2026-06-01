@@ -18,6 +18,8 @@ private:
     void guardarReportes() const;
     void cargarReportes() const;
     void mostrarMenu() const;
+
+    string leerEntrada(const string& mensaje) const;
 public:
     Menuprincipal();
     void ejecutar();

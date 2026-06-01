@@ -8,6 +8,7 @@
 #include "EstrategiaAhorro.h"
 #include "DeficitRecursoException.h"
 #include "EntidadBase.h"
+#include "Menuprincipal.h"
 
 int main() {
     try {
@@ -79,6 +80,10 @@ int main() {
         distIndustrial->mostrarReporteDistrito();
 
         std::cout << "\n===== FIN DE LA SIMULACION =====\n";
+        // ===== MODULO DE REPORTES =====
+        std::cout << "\n===== INICIO DEL SISTEMA DE REPORTES =====\n";
+        Menuprincipal menu;
+        menu.ejecutar();
     }
     catch (const std::exception& error) {
         std::cerr << "Error inesperado: " << error.what() << std::endl;
