@@ -123,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Adapatdortrafico.cpp" />
+    <ClCompile Include="Adaptadortrafico.cpp" />
     <ClCompile Include="AdaptadorAmbiental.cpp" />
     <ClCompile Include="AdaptadorEnergia.cpp" />
     <ClCompile Include="CentralEmergencias.cpp" />
@@ -153,7 +153,7 @@
     <ClCompile Include="ViaAlterna.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Adapatdortrafico.h" />
+    <ClInclude Include="Adaptadortrafico.h" />
     <ClInclude Include="AdaptadorAmbiental.h" />
     <ClInclude Include="AdaptadorEnergia.h" />
     <ClInclude Include="AdaptadorSensorTrafico.h" />

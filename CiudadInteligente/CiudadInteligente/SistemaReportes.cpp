@@ -1,6 +1,6 @@
 #include "SistemaReportes.h"
 
-
+SistemaReportes::SistemaReportes() {}
 
 
 void SistemaReportes::agregarObservador(IObservador *obs) 

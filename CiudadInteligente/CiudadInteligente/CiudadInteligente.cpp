@@ -82,8 +82,10 @@ int main() {
         std::cout << "\n===== FIN DE LA SIMULACION =====\n";
         // ===== MODULO DE REPORTES =====
         std::cout << "\n===== INICIO DEL SISTEMA DE REPORTES =====\n";
+        cin.ignore(1000, '\n');   // <- agregar aqui
         Menuprincipal menu;
         menu.ejecutar();
+
     }
     catch (const std::exception& error) {
         std::cerr << "Error inesperado: " << error.what() << std::endl;

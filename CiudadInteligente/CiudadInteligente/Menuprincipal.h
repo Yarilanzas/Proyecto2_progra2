@@ -1,27 +1,34 @@
+
 #pragma once
-#include "Adapatdortrafico.h"
-#include "AdaptadorAmbiental.h" 
 #include "AdaptadorEnergia.h"
+#include "Adaptadortrafico.h"
+#include "AdaptadorAmbiental.h"
+#include "SistemaReportes.h"
+#include "AlertarObservador.h"
+#include "ReporteEnergia.h"
+#include "Reportetrafico.h"
+#include "ReporteAmbiental.h"
+#include <string>
+using namespace std;
 
-
-//eesta clase solo maneja el menu y las opciones del menu,
-// no se encarga de generar los reportes ni nada,
-// solo es la interfaz con el usuario, 
-
-class Menuprincipal
-{
+// El menu solo habla directamente con los adaptadores y SistemaReportes.
+// Esta clase solo maneja la interaccion con el usuario en consola
+class Menuprincipal {
 private:
-    void generarReporteEnergia() const;
-    void generarReporteTrafico() const;
-    void generarReporteAmbiental() const;
-    void verEstadisticasGenerales() const;  
-    void guardarReportes() const;
-    void cargarReportes() const;
-    void mostrarMenu() const;
+    AlertarObservador alerta; // OBSERVER: observador registrado en SistemaReportes
 
     string leerEntrada(const string& mensaje) const;
+    void limpiarPantalla()          const;
+    void generarReporteEnergia()    const;
+    void generarReporteTrafico()    const;
+    void generarReporteAmbiental()  const;
+    void verEstadisticasGenerales() const;
+    void guardarReportes()          const;
+    void cargarReportes()           const;
+    void mostrarMenu()              const;
+
 public:
     Menuprincipal();
+    ~Menuprincipal();
     void ejecutar();
 };
-
