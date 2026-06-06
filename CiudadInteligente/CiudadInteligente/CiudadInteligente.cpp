@@ -79,9 +79,11 @@ int main() {
         std::cout << "\nReporte del distrito industrial RECARGADO desde archivo:\n";
         distIndustrial->mostrarReporteDistrito();
 
-        std::cout << "\n===== FIN DE LA SIMULACION =====\n";
+        std::cout << "\n===== FIN DE LA SIMULACION =====\n\n";
+      
         // ===== MODULO DE REPORTES =====
         std::cout << "\n===== INICIO DEL SISTEMA DE REPORTES =====\n";
+        std::cout << "PRECIONE ENTER PARA CONTINUAR ..." << endl;
         cin.ignore(1000, '\n');   // <- agregar aqui
         Menuprincipal menu;
         menu.ejecutar();

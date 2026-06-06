@@ -8,28 +8,19 @@ using namespace std;
 Menuprincipal::Menuprincipal() {
     SistemaReportes::getInstancia().agregarObservador(&alerta);
 }
-
-// Al destruir el menu se desregistra el observador
 Menuprincipal::~Menuprincipal() {
     SistemaReportes::getInstancia().eliminarObservador(&alerta);
 }
 
+// Valida que la entrada no este vacia
 string Menuprincipal::leerEntrada(const string& mensaje) const {
     string entrada;
     while (true) {
         cout << mensaje;
-        getline(cin, entrada);
+        cin >> entrada;
+        cin.ignore(1000, '\n');
         if (!entrada.empty()) {
-            bool tieneTextoValido = false;
-            for (size_t i = 0; i < entrada.length(); ++i) {
-                if (entrada[i] != ' ' && entrada[i] != '\t') {
-                    tieneTextoValido = true;
-                    break;
-                }
-            }
-            if (tieneTextoValido) {
-                return entrada;
-            }
+            return entrada;
         }
         cout << "La entrada no puede estar vacia.\n";
     }
@@ -53,8 +44,8 @@ void Menuprincipal::mostrarMenu() const {
 }
 
 // Crea DatosEnergia y lo pasa a AdaptadorEnergia (Adapter)
-// Registra el reporte en SistemaReportes y verifica si es critico
-// No accede a internos del adaptador ni del reporte desde aqui
+//  Registra el reporte en SistemaReportes y verifica si es critico
+//  No accede a internos del adaptador ni del reporte desde aqui
 void Menuprincipal::generarReporteEnergia() const {
     limpiarPantalla();
     cout << "\nGenerando reporte de energia...\n";
@@ -65,14 +56,16 @@ void Menuprincipal::generarReporteEnergia() const {
     AdaptadorEnergia adaptador(datos);
     cout << adaptador.obtenerDatos() << endl;
 
-    // Conectar con SistemaReportes 
     auto reporte = make_shared<ReporteEnergia>("Energia", "Norte", "Normal", 4500.0, 1800.0, true);
     SistemaReportes::getInstancia().agregarReporte(reporte);
     SistemaReportes::getInstancia().VerificarCriticos();
+
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
 }
 
-// Se crea DatosTrafico y lo pasa a Adapatdortrafico (Adapter)
-// Registra el reporte en SistemaReportes y verifica si es critico
+// Crea DatosTrafico y lo pasa a Adaptadortrafico (Adapter)
+//  Registra el reporte en SistemaReportes y verifica si es critico
 void Menuprincipal::generarReporteTrafico() const {
     limpiarPantalla();
     cout << "\nGenerando reporte de trafico...\n";
@@ -83,14 +76,13 @@ void Menuprincipal::generarReporteTrafico() const {
     Adaptadortrafico adaptador(datos);
     cout << adaptador.obtenerDatos() << endl;
 
-    // Conectar con SistemaReportes
     auto reporte = make_shared<ReporteTrafico>("Trafico", "Avenida Central", "Congestion alta", 850, 3, 32.0);
     SistemaReportes::getInstancia().agregarReporte(reporte);
     SistemaReportes::getInstancia().VerificarCriticos();
-}
 
-// Crea AdaptadorAmbiental con datos simulados
-// Registra el reporte en SistemaReportes y verifica si es critico
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
+}
 void Menuprincipal::generarReporteAmbiental() const {
     limpiarPantalla();
     cout << "\nGenerando reporte ambiental...\n";
@@ -98,10 +90,12 @@ void Menuprincipal::generarReporteAmbiental() const {
     AdaptadorAmbiental adaptador("Este", "Regular", 72.0, "Normal", 55, false);
     cout << adaptador.obtenerDatos() << endl;
 
-    // Conectar con SistemaReportes de la Persona A
     auto reporte = make_shared<ReporteAmbiental>("Ambiental", "Este", "Normal", "Regular", 72.0, "Condicion moderada");
     SistemaReportes::getInstancia().agregarReporte(reporte);
     SistemaReportes::getInstancia().VerificarCriticos();
+
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
 }
 
 void Menuprincipal::verEstadisticasGenerales() const {
@@ -112,18 +106,27 @@ void Menuprincipal::verEstadisticasGenerales() const {
     cout << "Modulos activos: Energia, Trafico, Ambiental" << endl;
     cout << "Use las opciones 1-3 para ver cada reporte." << endl;
     cout << "======================================" << endl;
+
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
 }
 
 void Menuprincipal::guardarReportes() const {
     limpiarPantalla();
     cout << "Guardando reportes..." << endl;
     cout << "Reportes guardados en: reportes_ciudad.txt\n";
+
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
 }
 
 void Menuprincipal::cargarReportes() const {
     limpiarPantalla();
     cout << "Cargando reportes..." << endl;
     cout << "Reportes cargados desde: reportes_ciudad.txt\n";
+
+    cout << "\nPresione Enter para volver al menu...";
+    cin.get();
 }
 
 void Menuprincipal::ejecutar() {
@@ -149,7 +152,7 @@ void Menuprincipal::ejecutar() {
         case 4: verEstadisticasGenerales(); break;
         case 5: guardarReportes();          break;
         case 6: cargarReportes();           break;
-        case 0: cout << "\nSaliendo del sistema...\n"; break;
+        case 0: limpiarPantalla(); cout << "\nSaliendo del sistema...\n"; break;
         default: cout << "Opcion no valida. Intente de nuevo.\n"; break;
         }
     }
