@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <fstream>
 #include <memory>
 #include <vector>
 #include <algorithm>
@@ -29,11 +29,13 @@ public:
     // void actualizarReporte(shared_ptr<ReporteBase> r)const override;
      void agregarObservador(IObservador* obs) override;
      void eliminarObservador(IObservador* obs) override;
-     void notificar(shared_ptr<ReporteBase> r) override;
      void agregarReporte(shared_ptr<ReporteBase> reporte);
-     void VerificarCriticos();
 
-    
+     void VerificarCriticos();// Al llamar VerificarCriticos(),se notifica a todos los observadores si el reporte es critico. 
+     void notificar(shared_ptr<ReporteBase> r) override;
+
+     void guardarEnArchivo(const string& nombreArchivo) const;
+     void cargarDesdeArchivo(const string& nombreArchivo);
      
      
 };

@@ -47,6 +47,7 @@ void Menuprincipal::mostrarMenu() const {
 //  Registra el reporte en SistemaReportes y verifica si es critico
 //  No accede a internos del adaptador ni del reporte desde aqui
 void Menuprincipal::generarReporteEnergia() const {
+    cout << "=== Generar Reporte de Energia ===" << endl;
     limpiarPantalla();
     cout << "\nGenerando reporte de energia...\n";
 
@@ -66,17 +67,21 @@ void Menuprincipal::generarReporteEnergia() const {
 
 // Crea DatosTrafico y lo pasa a Adaptadortrafico (Adapter)
 //  Registra el reporte en SistemaReportes y verifica si es critico
+
+
 void Menuprincipal::generarReporteTrafico() const {
+    cout << "=== Generar Reporte De Trafico ===" << endl;
+
     limpiarPantalla();
     cout << "\nGenerando reporte de trafico...\n";
 
-    DatosTrafico* datos = new DatosTrafico("Avenida Central", 850, 32.0, 12, 3, true);
+    DatosTrafico* datos = new DatosTrafico("Avenida Central", 850, 18.0, 12, 3, true);
     datos->agregarZonaCongestion("Calle 5");
     datos->agregarZonaCongestion("Rotonda Central");
     Adaptadortrafico adaptador(datos);
     cout << adaptador.obtenerDatos() << endl;
 
-    auto reporte = make_shared<ReporteTrafico>("Trafico", "Avenida Central", "Congestion alta", 850, 3, 32.0);
+    auto reporte = make_shared<ReporteTrafico>("Trafico", "Avenida Central", "Congestion alta", 850, 3, 18.0);
     SistemaReportes::getInstancia().agregarReporte(reporte);
     SistemaReportes::getInstancia().VerificarCriticos();
 
@@ -84,6 +89,7 @@ void Menuprincipal::generarReporteTrafico() const {
     cin.get();
 }
 void Menuprincipal::generarReporteAmbiental() const {
+    cout << "=== Generar Reporte Ambiental ===" << endl;
     limpiarPantalla();
     cout << "\nGenerando reporte ambiental...\n";
 
@@ -113,18 +119,30 @@ void Menuprincipal::verEstadisticasGenerales() const {
 
 void Menuprincipal::guardarReportes() const {
     limpiarPantalla();
+    cout << "=== Guardar Reportes ===" << endl;
     cout << "Guardando reportes..." << endl;
-    cout << "Reportes guardados en: reportes_ciudad.txt\n";
 
+    try {
+        SistemaReportes::getInstancia().guardarEnArchivo("reportes_ciudad.txt");
+        cout << "Reportes guardados exitosamente en: reportes_ciudad.txt\n";
+    }
+    catch (const runtime_error& e) {
+        cout << "Error al guardar: " << e.what() << "\n";
+    }
     cout << "\nPresione Enter para volver al menu...";
     cin.get();
 }
 
 void Menuprincipal::cargarReportes() const {
     limpiarPantalla();
+    cout << "=== Historial de Reportes ===" << endl;
     cout << "Cargando reportes..." << endl;
-    cout << "Reportes cargados desde: reportes_ciudad.txt\n";
-
+    try {
+        SistemaReportes::getInstancia().cargarDesdeArchivo("reportes_ciudad.txt");
+    }
+    catch (const runtime_error& e) {
+        cout << "Error al cargar: " << e.what() << "\n";
+    }
     cout << "\nPresione Enter para volver al menu...";
     cin.get();
 }

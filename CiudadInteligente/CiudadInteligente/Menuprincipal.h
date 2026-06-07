@@ -16,7 +16,6 @@ using namespace std;
 class Menuprincipal {
 private:
     AlertarObservador alerta; // OBSERVER: observador registrado en SistemaReportes
-
     string leerEntrada(const string& mensaje) const;
     void limpiarPantalla()          const;
     void generarReporteEnergia()    const;

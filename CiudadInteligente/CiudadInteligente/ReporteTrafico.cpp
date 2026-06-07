@@ -7,7 +7,7 @@ ReporteTrafico::ReporteTrafico(string m, string l, string es, int vM, int a, dou
     this->promedioDeVelocidad = pV;
     this->semaforosInteligentes = true; 
 
-    if (promedioDeVelocidad >= 20) { critico = true; }
+    if (promedioDeVelocidad <= 30) { critico = true; }
 
 }
 

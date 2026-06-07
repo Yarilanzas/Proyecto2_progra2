@@ -1,0 +1,23 @@
+=== REPORTES CIUDAD INTELIGENTE ===
+---------------------------REPORTE DE ENERGÍA
+Modulo: Energia
+Lugar: Norte
+Estado: Normal
+Consumo total: 4500
+Produccion energetica: 1800
+Distritos con mayor consumo: 
+Alertas de sobreconsumo: No tiene alertas de consumo
+Uso de fuentes renovables: Usa fuentes renovables
+
+---
+---------------------------REPORTE DE ENERGÍA
+Modulo: Trafico
+Lugar: Avenida Central
+Estado: Congestion alta
+Vehiculos monitoreados: 850
+Accidentes registrados: 3
+Promedio de velocidad: 18
+Distritos con mayor congestion: 
+Estado de semaforos inteligentes: Semaforos inteligentes en uso
+
+---
