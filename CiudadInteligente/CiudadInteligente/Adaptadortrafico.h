@@ -1,6 +1,7 @@
 #pragma once
 #include "IFuenteDatosReporte.h"
 #include "DatosTrafico.h"
+//Big Three Rule: evita la duplicacion de codigo
 class Adaptadortrafico : public IFuenteDatosReporte {
     private:
         DatosTrafico* adaptado; // Big Three: constructor, destructor, copy constructor, assignment operator

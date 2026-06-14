@@ -1,10 +1,10 @@
 #pragma once
 #include "IFuenteDatosReporte.h"
 #include <string>
-//Patron Adapter
-//Principio abierto / cerrado
-//cuando se cree Datos Ambiental se conectara aqui sin que el resto del sistema cambie
-//Principio parnas
+//Patron Adapter: es un patrón que permite que dos objetos con interfaces incompatibles puedan trabajar entre si 
+//SOLID: Principio abierto / cerrado
+//Cuando se cree Datos Ambiental se conectara aqui sin que el resto del sistema cambie
+//Principio parnas:se deja publica la informacion unicamente necesaria para su uso 
 
 class AdaptadorAmbiental : public IFuenteDatosReporte {
 private:
@@ -14,7 +14,6 @@ private:
     string estadoResiduos;
     int indiceContaminacion;
     bool enAlertaAmbiental;
-
     string getEstado() const;
 public:
     AdaptadorAmbiental(const std::string& distrito, 

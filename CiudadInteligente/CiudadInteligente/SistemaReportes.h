@@ -7,6 +7,8 @@
 #include <vector>
 #include <algorithm>
 #include "IObservable.h"
+//Big Five Rule: evita fugas de memoria y errores de corrupcin
+//Patron Singleton: patron que permite asegurar que una clase tenga una unica instancia 
 class SistemaReportes: public IObservable {
 private:
     vector<IObservador*> observadores;
