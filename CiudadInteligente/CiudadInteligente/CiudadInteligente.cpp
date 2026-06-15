@@ -9,6 +9,19 @@
 #include "DeficitRecursoException.h"
 #include "EntidadBase.h"
 #include "Menuprincipal.h"
+/*
+Principios Solid en el proyecto:
+
+S—(Responsabilidad Única): Cada clase tiene una sola razón para cambiar: ReporteEnergia, ReporteTrafico y ReporteAmbiental solo se encargan de representar su propio reporte 
+O—(Abierto/Cerrado): El sistema está abierto a extensión pero cerrado a modificación: si en el futuro se agrega un nuevo módulo basta con crear una nueva clase
+L—(Sustitución de Liskov): Cualquier shared_ptr<ReporteBase> puede ser un ReporteEnergia, ReporteTrafico o ReporteAmbiental 
+I—(Segregación de Interfaces): Las interfaces son pequeñas y específicas en lugar de una sola interfaz gigante como se hacia anteriormente en pasados cursos 
+D—(Inversión de Dependencias) Los módulos de alto nivel dependen de abstracciones, no de implementaciones concretas por ejemplo en el proyecto SistemaReportes depende de ReporteBase que es una clase abstracta y de las clases abstractas del 
+los observadores no de las clases concretas como ReporteEnergia, ReporteTrafico. 
+
+Ley de Demeter: esta ley consiste en que los objetos solo pueden interactuar con sus dependencias inmediatas
+en el apartado del proyecto no se utiliza el concatenamiento
+*/
 
 int main() {
     try {
