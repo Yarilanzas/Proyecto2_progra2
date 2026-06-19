@@ -13,7 +13,7 @@ string ReporteAmbiental::toString() const
 {
     stringstream ss;
     ss << "---------------------------";
-    ss << "REPORTE DE ENERGÍA\n";
+    ss << "REPORTE AMBIENTAL\n";
     ss << "Modulo: " << modulo << "\n";
     ss << "Lugar: " << lugar << "\n";
     ss << "Estado: " << estado << "\n";

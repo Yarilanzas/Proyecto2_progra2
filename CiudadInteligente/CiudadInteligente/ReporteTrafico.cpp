@@ -15,7 +15,7 @@ string ReporteTrafico::toString() const
 {
     stringstream ss;
     ss << "---------------------------";
-    ss << "REPORTE DE ENERGÍA\n";
+    ss << "REPORTE DE TRAFICO\n";
     ss << "Modulo: " << modulo << "\n";
     ss << "Lugar: " << lugar << "\n";
     ss << "Estado: " << estado << "\n";

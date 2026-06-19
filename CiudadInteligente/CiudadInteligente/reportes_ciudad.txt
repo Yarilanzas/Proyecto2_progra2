@@ -21,3 +21,12 @@ Distritos con mayor congestion:
 Estado de semaforos inteligentes: Semaforos inteligentes en uso
 
 ---
+---------------------------REPORTE DE ENERGÍA
+Modulo: Ambiental
+Lugar: Este
+Estado: Normal
+Calidad de aire: Regular
+Nivel de ruido: 72 dB
+Estado Ambiental: Condicion moderada
+
+---

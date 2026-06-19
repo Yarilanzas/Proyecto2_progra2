@@ -6,7 +6,7 @@
 #include "SistemaReportes.h"
 #include "AlertarObservador.h"
 #include "ReporteEnergia.h"
-#include "Reportetrafico.h"
+#include "ReporteTrafico.h"
 #include "ReporteAmbiental.h"
 #include <string>
 using namespace std;

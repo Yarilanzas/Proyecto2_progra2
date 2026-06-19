@@ -27,7 +27,7 @@ string ReporteEnergia::toString() const
     for (auto d : distritosMayorConsumo) {
         ss << d->getNombre()<< "\n";
     }
-    ss << "Alertas de sobreconsumo: " << (alertas ? "No tiene alertas de consumo" : "Sí tiene alertas de consumo") << "\n";
+    ss << "Alertas de sobreconsumo: " << (alertas ? "Sí tiene alertas de consumo" : "No tiene alertas de consumo") << "\n";
     ss << "Uso de fuentes renovables: " << (fuentesRenovables ? "Usa fuentes renovables" : "No usa fuentes renovables ") << "\n";
     return ss.str();
 }

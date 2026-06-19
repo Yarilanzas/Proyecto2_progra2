@@ -18,6 +18,8 @@ AdaptadorEnergia& AdaptadorEnergia::operator=(const AdaptadorEnergia& otro) {
     }
     return *this;
 }
+
+
 string AdaptadorEnergia::obtenerDatos() const {
     std::ostringstream oss;
     oss << "Distrito: " << adaptado->getDistrito() << "\n";
@@ -25,19 +27,17 @@ string AdaptadorEnergia::obtenerDatos() const {
     oss << "Produccion Solar: " << adaptado->getProduccionSolar() << " kWh\n";
     oss << "Produccion Total: " << adaptado->getProduccionTotal() << " kWh\n";
     oss << "Alertas de Sobreconsumo: " << adaptado->getAlertas() << "\n";
-    return oss.str();
 
-vector<string> fuentes = adaptado->getFuentesRenovables();
-if(!fuentes.empty()){
-    oss << "Fuentes Renovables: ";
-    for(const auto& fuente : fuentes){
-        oss << fuente << " ";
+    vector<string> fuentes = adaptado->getFuentesRenovables();
+    if (!fuentes.empty()) {
+        oss << "Fuentes Renovables: ";
+        for (const auto& fuente : fuentes) {
+            oss << fuente << " ";
+        }
+        oss << "\n";
     }
-    oss << "\n";
-}
-
-oss << "Estado: " << adaptado->getEstado() << "\n";
-return oss.str();
+    oss << "Estado: " << adaptado->getEstado() << "\n";
+    return oss.str();   
 }
 
 string AdaptadorEnergia::getNombreModulo() const {
